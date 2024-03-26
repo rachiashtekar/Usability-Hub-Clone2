@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="mediaquery.css">
   </head>
   <body>
     <!--- top banner -->
@@ -22,7 +23,7 @@
         <a href="#" class="company-logo">
           <img src="/asset/asset 0.png" alt="company logo" />
         </a>
-        <div class="nav-links">
+        <div class="nav-links", id="nav-links">
           <ul class="flex">
             <li><a href="#" class="hover-link">Products</a></li>
             <li><a href="#" class="hover-link">Customers</a></li>
@@ -32,6 +33,7 @@
             <li><a href="#" class="hover-link primary-button">Sign up</a></li>
           </ul>
         </div>
+        <a href="#" class="nav-toggle hover-link" id="nav-toggle"><i class="fa-solid fa-bars"></i></a>
       </div>
     </nav>
 
@@ -120,7 +122,7 @@
     </section>
 
     <section class="big-features-section">
-      <div class="container flex big-features-section">
+      <div class="container flex big-features-container" >
         <div class="feature-img">
           <img src="asset/asset 15.png" alt="">
         </div>
@@ -134,21 +136,25 @@
     </section>
 
     <section class="big-features-section">
-      <div class="container flex big-features-section">
+      <div class="container flex big-features-container" , id="second-big-features">
+        <div class="feature-img">
+          <img src="asset/asset 16.png" alt="">
+        </div>
+
        
         <div class="features-desc flex">
           <h4>Effortless validation for</h4>
           <h3>Design professionals</h3>
           <p>Test interfaces, interaction flows, iconography and more, to help you create intuitive and delightful experiences for your users.</p>
         </div>
-        <div class="feature-img">
+        <!-- <div class="feature-img">
           <img src="asset/asset 16.png" alt="">
-        </div>
+        </div> -->
 
       </div>
     </section>
     <section class="big-features-section">
-      <div class="container flex big-features-section">
+      <div class="container flex big-features-container">
         <div class="feature-img">
           <img src="asset/asset 17.png" alt="">
         </div>
@@ -259,5 +265,12 @@
       src="https://kit.fontawesome.com/904949fc71.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const toggleButton = document.getElementById('nav-toggle');
+      const navLinks = document.getElementById("nav-links")
+      toggleButton.addEventListener('click',()=>{
+        navLinks.classList.toggle('active')
+      })
+    </script>
   </body>
 </html>
